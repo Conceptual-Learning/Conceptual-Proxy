@@ -12,6 +12,8 @@ const proxy = httpProxy.createProxyServer({
 app.use("/api", function(req, res) {
   proxy.web(req, res);
 });
+app.use(express.static("public"));
+app.use("/", express.static("public/index.html"));
 
 app.listen(PORT, function() {
   console.log(`CORS-enabled web server listening on port ${PORT}`);
