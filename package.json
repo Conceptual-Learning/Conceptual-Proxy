@@ -1,0 +1,13 @@
+{
+  "name": "conceptual-proxy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "lidor cohen <lidorcg@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "http-proxy": "^1.17.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
