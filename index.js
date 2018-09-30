@@ -1,10 +1,13 @@
-var httpProxy = require("http-proxy");
-const PORT = process.env.PORT || 5000;
+const express = require("express");
+var cors = require("cors");
+const proxy = require("express-http-proxy");
 
-httpProxy
-  .createProxyServer({
-    target: "https://eu1.prisma.sh/lidor-cohen/conceptual-api/dev",
-    changeOrigin: true
-  })
-  .listen(PORT);
-console.log(`listening on port ${PORT}`);
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.use(cors());
+app.use("/api", proxy("https://eu1.prisma.sh/lidor-cohen/conceptual-api/dev"));
+
+app.listen(PORT, function() {
+  console.log(`CORS-enabled web server listening on port ${PORT}`);
+});
