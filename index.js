@@ -5,5 +5,5 @@ httpProxy
     target: "https://eu1.prisma.sh/lidor-cohen/conceptual-api/dev",
     changeOrigin: true
   })
-  .listen(8000);
-console.log("listening on port 8000");
+  .listen(443);
+console.log("listening on port 443");
