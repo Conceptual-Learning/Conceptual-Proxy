@@ -16,5 +16,5 @@ app.use(express.static("public"));
 app.use("/", express.static("public/index.html"));
 
 app.listen(PORT, function() {
-  console.log(`CORS-enabled web server listening on port ${PORT}`);
+  console.log(`Conceptual-nodes proxy server listening on port ${PORT}`);
 });
